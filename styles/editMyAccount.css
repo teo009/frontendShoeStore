@@ -12,12 +12,6 @@ body {
     grid-template-rows: auto 1fr auto;
     width: 300px;
 }
-.logo {
-    width: 200px;
-    margin-bottom: 48px;
-    justify-self: center;
-    display: none;
-}
 .title {
     font-size: var(--lg);
     margin-bottom: 40px;
@@ -36,32 +30,13 @@ body {
     font-weight: bold;
     margin-bottom: 4px;
 }
-.input {
+.value {
+    border-radius: 8px;
+    margin: 8px 0 32px 0;
+    font-size: var(--md);
     background-color: var(--text-input-field);
-    border: none;
-    border-radius: 8px;
     height: 30px;
-    font-size: var(--md);
     padding: 6px;
-    margin-bottom: 18px;
-}
-.input-name, .input-email, .input-password {
-    margin-bottom: 22px;
-}
-.primary-button {
-    background-color: var(--hospital-green);
-    border-radius: 8px;
-    border: none;
-    color: var(--white);
-    width: 100%;
-    height: 40px;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-}
-.primary-button:hover {
-    background-color: var(--very-light-pink);
-    font-size: var(--lg);
 }
 .secondary-button {
     background-color: var(--white);
@@ -77,10 +52,6 @@ body {
 .secondary-button:hover {
     background-color: var(--text-input-field);
     font-size: var(--lg);
-}
-.login-button {
-    margin-top: 14px;
-    margin-bottom: 30px;
 }
 @media (max-width: 650px) {
     .form-container {
