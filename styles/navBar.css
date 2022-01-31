@@ -3,6 +3,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);
 }
 .menu {
     display: none;
@@ -59,4 +60,20 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media (max-width: 800px) {
+    .navbar-email {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .menu {
+        display: block;
+    }
+    .navbar-left ul {
+        display: none;
+    }
+    .navbar-email {
+        display: none;
+    }
 }
