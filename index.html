@@ -31,7 +31,7 @@
         </div>
         <div class="navbar-right">
             <ul>
-                <li class="navbar-email" onclick="toggleDesktopMenu()">teo.obando09@gmail.com</li>
+                <li class="navbar-email">teo.obando09@gmail.com</li>
                 <li class="navbar-shopping-car" onclick="toggleAside()">
                     <img src="./assets/shoeStore_icons/icon_shopping_cart.svg" alt="shopping car">
                     <div>2</div>
@@ -39,7 +39,7 @@
             </ul>
 
         </div>
-        <div class="desktop-menu inactive">
+        <div class="desktop-menu">
             <ul>
                 <li><a href="/" class="title">My orders</a></li>
                 <li><a href="/">My account</a></li>
@@ -68,7 +68,7 @@
     </nav>
     <aside class="product-detail inactive">
         <div class="title-container">
-            <img src="./assets/shoeStore_icons/flechita.svg" alt="arrow">
+            <img src="./assets/shoeStore_icons/flechita.svg" alt="arrow" onclick="toggleAside()">
             <p class="title">Shopping Car</p>
         </div>
         <div class="my-order-content">

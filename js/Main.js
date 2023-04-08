@@ -1,10 +1,18 @@
+const navEmail = document.querySelector('.navbar-email');
 const desktopMenu = document.querySelector('.desktop-menu');
+
 const mobileMenu = document.querySelector('.mobile-menu');
 const productAside = document.querySelector('.product-detail');
 
-const toggleDesktopMenu = () => {
-    desktopMenu.classList.toggle('inactive');
-}
+navEmail.addEventListener('mouseover', () => {
+    desktopMenu.style.visibility = 'visible';
+})
+navEmail.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+        desktopMenu.style.visibility = 'hidden';
+    }, 1000)
+});
+
 const toggleMobileMenu = () => {
     mobileMenu.classList.toggle('inactive');
 }
