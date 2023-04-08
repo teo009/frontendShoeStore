@@ -14,8 +14,18 @@ navEmail.addEventListener('mouseleave', () => {
 });
 
 const toggleMobileMenu = () => {
-    mobileMenu.classList.toggle('inactive');
+    if(!productAside.classList.contains('inactive')) {
+        productAside.classList.toggle('inactive');
+        mobileMenu.classList.toggle('inactive');
+    } else {
+        mobileMenu.classList.toggle('inactive');
+    }
 }
 const toggleAside = () => {
-    productAside.classList.toggle('inactive');
+    if(!mobileMenu.classList.contains('inactive')) {
+        mobileMenu.classList.toggle('inactive');
+        productAside.classList.toggle('inactive');
+    } else {
+        productAside.classList.toggle('inactive');
+    }
 }
