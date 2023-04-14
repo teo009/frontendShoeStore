@@ -2,7 +2,7 @@ const navEmail = document.querySelector('.navbar-email');
 const desktopMenu = document.querySelector('.desktop-menu');
 
 const mobileMenu = document.querySelector('.mobile-menu');
-const productAside = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 
 const CardsContainer = document.querySelector('.cards-container');
 
@@ -16,8 +16,8 @@ navEmail.addEventListener('mouseleave', () => {
 });
 
 const toggleMobileMenu = () => {
-    if(!productAside.classList.contains('inactive')) {
-        productAside.classList.toggle('inactive');
+    if(!shoppingCartContainer.classList.contains('inactive')) {
+        shoppingCartContainer.classList.toggle('inactive');
         mobileMenu.classList.toggle('inactive');
     } else {
         mobileMenu.classList.toggle('inactive');
@@ -26,9 +26,9 @@ const toggleMobileMenu = () => {
 const toggleAside = () => {
     if(!mobileMenu.classList.contains('inactive')) {
         mobileMenu.classList.toggle('inactive');
-        productAside.classList.toggle('inactive');
+        shoppingCartContainer.classList.toggle('inactive');
     } else {
-        productAside.classList.toggle('inactive');
+        shoppingCartContainer.classList.toggle('inactive');
     }
 }
 
@@ -43,6 +43,7 @@ productlist.push({
     price: 100,
     image: 'https://i.ebayimg.com/images/g/NIUAAOSw6bVi0MlM/s-l1600.jpg',
 })
+
 productlist.push({
     name: 'nike',
     price: 120,

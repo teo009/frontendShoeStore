@@ -36,7 +36,7 @@ body {margin: 0;}
     font-size: var(--md);
     font-weight: bold;
 }
-.product-detail {
+.aside {
     width: 360px;
     padding: 24px;
     box-sizing: border-box;
@@ -79,7 +79,7 @@ body {margin: 0;}
 }
 
 @media (max-width: 640px) {
-    .product-detail {
+    .aside {
         width: 100%;
     }
 }
