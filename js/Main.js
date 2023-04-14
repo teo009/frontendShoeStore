@@ -1,23 +1,19 @@
 const navEmail = document.querySelector('.navbar-email');
 const desktopMenu = document.querySelector('.desktop-menu');
+const productDetailClose = document.querySelector('.product-detail-close');
 
 const mobileMenu = document.querySelector('.mobile-menu');
-const productAside = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
+const productDetailContainer = document.querySelector('#productDetail');
 
 const CardsContainer = document.querySelector('.cards-container');
 
-navEmail.addEventListener('mouseover', () => {
-    desktopMenu.style.visibility = 'visible';
-})
-navEmail.addEventListener('mouseleave', () => {
-    setTimeout(() => {
-        desktopMenu.style.visibility = 'hidden';
-    }, 1000)
-});
-
 const toggleMobileMenu = () => {
-    if(!productAside.classList.contains('inactive')) {
-        productAside.classList.toggle('inactive');
+    if(!shoppingCartContainer.classList.contains('inactive')) {
+        shoppingCartContainer.classList.toggle('inactive');
+        mobileMenu.classList.toggle('inactive');
+    } else if(!productDetailContainer.classList.contains('inactive')) {
+        productDetailContainer.classList.toggle('inactive');
         mobileMenu.classList.toggle('inactive');
     } else {
         mobileMenu.classList.toggle('inactive');
@@ -26,11 +22,31 @@ const toggleMobileMenu = () => {
 const toggleAside = () => {
     if(!mobileMenu.classList.contains('inactive')) {
         mobileMenu.classList.toggle('inactive');
-        productAside.classList.toggle('inactive');
+        shoppingCartContainer.classList.toggle('inactive');
+    } else if (!productDetailContainer.classList.contains('inactive')) {
+        productDetailContainer.classList.toggle('inactive');
+        shoppingCartContainer.classList.toggle('inactive');
     } else {
-        productAside.classList.toggle('inactive');
+        shoppingCartContainer.classList.toggle('inactive');
     }
 }
+const toggleProductDetailAside = () => {
+    if(!shoppingCartContainer.classList.contains('inactive')) {
+        shoppingCartContainer.classList.toggle('inactive');
+        productDetailContainer.classList.toggle('inactive');
+    } else {
+        productDetailContainer.classList.toggle('inactive');
+    }
+}
+navEmail.addEventListener('mouseover', () => {
+    desktopMenu.style.visibility = 'visible';
+})
+navEmail.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+        desktopMenu.style.visibility = 'hidden';
+    }, 1000)
+});
+productDetailClose.addEventListener('click', toggleProductDetailAside);
 
 const productlist = [];
 productlist.push({
@@ -43,6 +59,7 @@ productlist.push({
     price: 100,
     image: 'https://i.ebayimg.com/images/g/NIUAAOSw6bVi0MlM/s-l1600.jpg',
 })
+
 productlist.push({
     name: 'nike',
     price: 120,
@@ -81,6 +98,7 @@ const renderProducts = (productArr) => {
     
         const img = document.createElement('img');
         img.setAttribute('src', product.image);
+        img.addEventListener('click', toggleProductDetailAside);
     
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
